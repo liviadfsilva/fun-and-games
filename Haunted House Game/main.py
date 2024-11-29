@@ -33,7 +33,6 @@ print(r'''
               '
 ''')
 
-#Find the exit game
 print("It's Halloween night and you decide to go to a haunted house.\n"
       "There's only one exit, and you must make the right choices in order to reach it.\n"
       "Find the way out before someone — or something — finds you first.")
