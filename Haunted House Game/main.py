@@ -1,3 +1,5 @@
+import os
+
 print(r'''
                             .-----.
                           .'       `.
@@ -43,11 +45,13 @@ choice1 = input('You\'re standing in a dark, dim-lit foyer, covered in cobwebs a
       'Type "staircase" or "kitchen"\n').lower().strip()
 
 if choice1 == "staircase":
+    os.system('cls' if os.name == 'nt' else 'clear')
     choice2 = input('You reached the top of the staircase. '
           'There\'s a corridor on the left and another one on the right. '
           'Which way do you want to go? '
           'Type "left" or "right"\n').lower().strip()
     if choice2 == "left":
+        os.system('cls' if os.name == 'nt' else 'clear')
         choice4 = input('There\'s 3 doors at the end of the corridor. '
                         'The one on the left says "BEWARE! '
                         'The one in the middle says "DANGER! '
@@ -55,6 +59,7 @@ if choice1 == "staircase":
                         'Which door will you choose? '
                         'Type "beware", "danger" or "exit"\n').lower().strip()
         if choice4 == "beware":
+            os.system('cls' if os.name == 'nt' else 'clear')
             print("You walked into a den of vipers. Game over!")
         elif choice4 == "danger":
             choice6 = input('You walk into a room full of dolls, with a red light on. '
@@ -71,14 +76,26 @@ if choice1 == "staircase":
                             'You\'re unsure, but you must choose a window. '
                             'Type "bright" or "dark"').lower().strip()
             if choice6 == "bright":
+                os.system('cls' if os.name == 'nt' else 'clear')
                 print("Never trust eerie dolls. By walking on the line, you triggered a gas bomb. "
                       "Game over!")
             elif choice6 == "dark":
+                os.system('cls' if os.name == 'nt' else 'clear')
                 print("You found the exit! "
                       "You trusted your instincts and they led you to a window with a fire escape. "
                       "You win!")
             else:
-                print("You chose an option that doesn't exist. Game over!")
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print(r''' 
+    ⠀⢀⣴⣿⣿⣿⣦⠀
+⠀⠀⠀⠀⣰⣿⡟⢻⣿⡟⢻⣧
+⠀⠀⠀⣰⣿⣿⣇⣸⣿⣇⣸⣿
+⠀⠀⣴⣿⣿⣿⣿⠟⢻⣿⣿⣿
+⣠⣾⣿⣿⣿⣿⣿⣤⣼⣿⣿⠇
+⢿⡿⢿⣿⣿⣿⣿⣿⣿⣿⡿⠀
+⠀⠀⠈⠿⠿⠋⠙⢿⣿⡿⠁⠀
+
+You chose an option that doesn't exist. Game over!''')
         elif choice4 == "exit":
             choice5 = input('In the middle of the room, you find a stand with a red button on it. '
                             'Taking a closer look, you see the word "exit" written on it. '
@@ -87,18 +104,41 @@ if choice1 == "staircase":
                             'Press the button or go back. What do you choose to do?'
                             'Type "button" or "back"\n').lower().strip()
             if choice5 == "button":
+                os.system('cls' if os.name == 'nt' else 'clear')
                 print("It was a trap! The floor gave out and you fell into a spiderweb. Game over!")
             elif choice5 == "back":
+                os.system('cls' if os.name == 'nt' else 'clear')
                 print("You ran into the murderer. "
                       "He's wearing a rotten pumpkin as a mask while holding an axe in his hand. "
                       "Game over!")
             else:
-                print("You chose an option that doesn't exist. Game over!")
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print(r''' 
+    ⠀⢀⣴⣿⣿⣿⣦⠀
+⠀⠀⠀⠀⣰⣿⡟⢻⣿⡟⢻⣧
+⠀⠀⠀⣰⣿⣿⣇⣸⣿⣇⣸⣿
+⠀⠀⣴⣿⣿⣿⣿⠟⢻⣿⣿⣿
+⣠⣾⣿⣿⣿⣿⣿⣤⣼⣿⣿⠇
+⢿⡿⢿⣿⣿⣿⣿⣿⣿⣿⡿⠀
+⠀⠀⠈⠿⠿⠋⠙⢿⣿⡿⠁⠀
+
+You chose an option that doesn't exist. Game over!''')
     elif choice2 == "right":
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("The boards were rotten and you fell through them, "
               "right into a room full of corpses. Game over!")
     else:
-        print("You chose an option that doesn't exist. Game over!")
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print(r''' 
+    ⠀⢀⣴⣿⣿⣿⣦⠀
+⠀⠀⠀⠀⣰⣿⡟⢻⣿⡟⢻⣧
+⠀⠀⠀⣰⣿⣿⣇⣸⣿⣇⣸⣿
+⠀⠀⣴⣿⣿⣿⣿⠟⢻⣿⣿⣿
+⣠⣾⣿⣿⣿⣿⣿⣤⣼⣿⣿⠇
+⢿⡿⢿⣿⣿⣿⣿⣿⣿⣿⡿⠀
+⠀⠀⠈⠿⠿⠋⠙⢿⣿⡿⠁⠀
+
+You chose an option that doesn't exist. Game over!''')
 elif choice1 == "kitchen":
     choice3 = input('You entered the kitchen. '
                     'There\'s a slaughtered pig lying on the counter with a knife stabbed at its belly.'
@@ -108,12 +148,34 @@ elif choice1 == "kitchen":
                     'What do you do?'
                     'Type "exit" or "run"\n').lower().strip()
     if choice3 == "exit":
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("You climbed out the window and fell into a grave. Game over.")
     elif choice3 == "run":
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("You ran into the murderer. "
               "He's wearing a rotten pumpkin as a mask while holding an axe in his hand."
               "Game over.")
     else:
-        print("You chose an option that doesn't exist. Game over!")
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print(r''' 
+    ⠀⢀⣴⣿⣿⣿⣦⠀
+⠀⠀⠀⠀⣰⣿⡟⢻⣿⡟⢻⣧
+⠀⠀⠀⣰⣿⣿⣇⣸⣿⣇⣸⣿
+⠀⠀⣴⣿⣿⣿⣿⠟⢻⣿⣿⣿
+⣠⣾⣿⣿⣿⣿⣿⣤⣼⣿⣿⠇
+⢿⡿⢿⣿⣿⣿⣿⣿⣿⣿⡿⠀
+⠀⠀⠈⠿⠿⠋⠙⢿⣿⡿⠁⠀
+
+You chose an option that doesn't exist. Game over!''')
 else:
-    print("You chose an option that doesn't exist. Game over!")
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(r''' 
+    ⠀⢀⣴⣿⣿⣿⣦⠀
+⠀⠀⠀⠀⣰⣿⡟⢻⣿⡟⢻⣧
+⠀⠀⠀⣰⣿⣿⣇⣸⣿⣇⣸⣿
+⠀⠀⣴⣿⣿⣿⣿⠟⢻⣿⣿⣿
+⣠⣾⣿⣿⣿⣿⣿⣤⣼⣿⣿⠇
+⢿⡿⢿⣿⣿⣿⣿⣿⣿⣿⡿⠀
+⠀⠀⠈⠿⠿⠋⠙⢿⣿⡿⠁⠀
+
+You chose an option that doesn't exist. Game over!''')
