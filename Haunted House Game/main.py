@@ -42,20 +42,20 @@ choice1 = input('You\'re standing in a dark, dim-lit foyer, covered in cobwebs a
       'On the other hand, right in front of you there\'s a grand staircase. '
       'You can either go up the staircase or walk into the kitchen. '
       'Which way do you want to go?\n'
-      'Type "staircase" or "kitchen"\n').lower()
+      'Type "staircase" or "kitchen"\n').lower().strip()
 
 if choice1 == "staircase":
     choice2 = input('You reached the top of the staircase. '
           'There\'s a corridor on the left and another one on the right. '
           'Which way do you want to go? '
-          'Type "left" or "right"\n').lower()
+          'Type "left" or "right"\n').lower().strip()
     if choice2 == "left":
         choice4 = input('There\'s 3 doors at the end of the corridor. '
                         'The one on the left says "BEWARE! '
                         'The one in the middle says "DANGER! '
                         'And the one on the right says "EXIT" '
                         'Which door will you choose? '
-                        'Type "beware", "danger" or "exit"\n').lower()
+                        'Type "beware", "danger" or "exit"\n').lower().strip()
         if choice4 == "beware":
             print("You walked into a den of vipers. Game over!")
         elif choice4 == "danger":
@@ -71,7 +71,7 @@ if choice1 == "staircase":
                             'You\'re one choice away from finding your way out,'
                             'but can you really trust the doll? '
                             'You\'re unsure, but you must choose a window. '
-                            'Type "bright" or "dark"').lower()
+                            'Type "bright" or "dark"').lower().strip()
             if choice6 == "bright":
                 print("Never trust eerie dolls. By walking on the line, you triggered a gas bomb. "
                       "Game over!")
@@ -87,7 +87,7 @@ if choice1 == "staircase":
                             'You start to wonder if this could really be the way out, or a trap.'
                             'You\'re indecisive, but you must make a choice. '
                             'Press the button or go back. What do you choose to do?'
-                            'Type "button" or "back"\n').lower()
+                            'Type "button" or "back"\n').lower().strip()
             if choice5 == "button":
                 print("It was a trap! The floor gave out and you fell into a spiderweb. Game over!")
             elif choice5 == "back":
@@ -108,7 +108,7 @@ elif choice1 == "kitchen":
                     'With a closer look at it, you realize the message was written with blood.'
                     'You can either run back to the foyer or climb out the window.'
                     'What do you do?'
-                    'Type "exit" or "run"\n').lower()
+                    'Type "exit" or "run"\n').lower().strip()
     if choice3 == "exit":
         print("You climbed out the window and fell into a grave. Game over.")
     elif choice3 == "run":
