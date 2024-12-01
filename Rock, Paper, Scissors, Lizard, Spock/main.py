@@ -44,17 +44,17 @@ spock = '''
  |       |
 '''
 
-gestures = [rock, paper, scissors, lizard, spock]
+shapes = [rock, paper, scissors, lizard, spock]
 
 user_choice = int(input("What do you choose?\n"
       "Type 0 for Rock, 1 for Paper, 2 for Scissors, 3 for Lizard or 4 for Spock.\n"))
 
 if user_choice >= 0 and user_choice <= 4:
-      print(gestures[user_choice])
+      print(shapes[user_choice])
 
 computer_choice = random.randint(0,4)
 print("Computer chose:")
-print(gestures[computer_choice])
+print(shapes[computer_choice])
 
 if user_choice > 4 or user_choice < 0:
       print("You typed an invalid option.")
