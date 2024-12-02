@@ -19,8 +19,8 @@ However, to make things simpler, let's put it this way:
 ## How to Play?
 1. As soon as you run the code, you'll be asked to choose among Rock, Paper, Scissors, Lizard and Spock.
 2. Once your choice was made, it's the computer's turn to choose an option.
-3. The computer will always choose a random option, which means you an either win or lose.
-4. In case the computer chooses the same option as you, which could happen, then it will be a draw.
+3. The computer will always choose a random option, which means you can either win or lose.
+4. In case the computer chooses the same option as you, which might happen, then it will be a draw.
 5. If you win, lose or it's a draw, the end result will be shown after the computer makes a choice.
 
 ## Example:
