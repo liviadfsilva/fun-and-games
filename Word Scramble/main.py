@@ -6,54 +6,49 @@ print(logo)
 
 lives = 6
 
-original_easy_word = random.choice(easy)
-original_medium_word = random.choice(medium)
-original_hard_word = random.choice(hard)
+words_list = [easy, medium, hard]
 
 print("Welcome to Word Scramble!")
 difficulty_level = input('Choose a difficulty level:\n'
                          'Type "easy", "medium" or "hard".\n').lower().strip()
 
 if difficulty_level == "easy":
-    easy_word = list(original_easy_word)
-    random.shuffle(easy_word)
-    final_easy_word = ''.join(easy_word)
-    print(final_easy_word)
-    correct_word = original_easy_word
+    words_list = easy
 elif difficulty_level == "medium":
-    medium_word = list(original_medium_word)
-    random.shuffle(medium_word)
-    final_medium_word = ''.join(medium_word)
-    print(final_medium_word)
-    correct_word = original_medium_word
+    words_list = medium
 elif difficulty_level == "hard":
-        hard_word = list(original_hard_word)
-        random.shuffle(hard_word)
-        final_hard_word = ''.join(hard_word)
-        print(final_hard_word)
-        correct_word = original_hard_word
+    words_list = hard
 else:
     print("You chose an invalid option.")
-    correct_word = None
+    words_list = None
 
-game_over = False
+if words_list:
+    original_word = random.choice(words_list)
+    scrambled_word = list(original_word)
+    random.shuffle(scrambled_word)
+    final_word = ''.join(scrambled_word)
 
-while not game_over:
+    print(final_word)
+    correct_word = original_word
 
-    print(f"****************************{lives}/6 LIVES LEFT****************************")
+    game_over = False
 
-    guess = input("What word is that?\n")
+    while not game_over:
 
-    if guess != correct_word:
-        lives -= 1
-        print(f"You guessed {guess}. That's not the word. You lose a life.")
+        print(f"****************************{lives}/6 LIVES LEFT****************************")
 
-        if lives == 0:
+        guess = input("What word is that?\n")
+
+        if guess != correct_word:
+            lives -= 1
+            print(f"You guessed {guess}. That's not the word. You lose a life.")
+
+            if lives == 0:
+                game_over = True
+                print(f"***********************IT WAS {correct_word}! YOU LOSE**********************")
+
+
+        if guess == correct_word:
             game_over = True
-            print(f"***********************IT WAS {correct_word}! YOU LOSE**********************")
-
-
-    if guess == correct_word:
-        game_over = True
-        print("****************************YOU WIN****************************\n"
-            f"The right word is: {correct_word} from the {difficulty_level} level!")
+            print("****************************YOU WIN****************************\n"
+                f"The right word is: {correct_word} from the {difficulty_level} level!")
