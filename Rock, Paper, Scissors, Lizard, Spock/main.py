@@ -49,7 +49,7 @@ shapes = [rock, paper, scissors, lizard, spock]
 user_choice = int(input("What do you choose?\n"
       "Type 0 for Rock, 1 for Paper, 2 for Scissors, 3 for Lizard or 4 for Spock.\n"))
 
-if user_choice >= 0 and user_choice <= 4:
+if user_choice >= 0 or user_choice <= 4:
       print(shapes[user_choice])
 
 computer_choice = random.randint(0,4)
