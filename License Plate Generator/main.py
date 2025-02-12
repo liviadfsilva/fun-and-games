@@ -1,26 +1,19 @@
-from lists import cap_letters, plates
+from letters_list import letters
 import random
 
-generator_is_on = True
+def create_plate():
+    random_letters = random.sample(letters, 3)
+    numbers = random.sample(range(0, 9), 4)
 
-def generate_plate():
-    letters = random.choices(cap_letters, k=3)
-    numbers = random.choices(range(0, 9), k=4)
+    letters_output = ''.join(random_letters)
+    numbers_output = int(''.join(map(str, numbers)))
 
-    let_result = ''.join(letters)
-    nr_result = ''.join(map(str, numbers))
+    plate = letters_output + str(numbers_output)
 
-    license_plate = let_result + nr_result
-    if license_plate in plates:
-        generate_plate()
+    if plate in "data.txt":
+        create_plate()
     else:
-        plates.append(license_plate)
-        print(f"Your license plate is: {license_plate}")
+        with open("data.txt", mode="a") as data:
+            data.write("\n" + plate)
 
-while generator_is_on:
-    ask_user = input("Would you like to generate a license plate? (Y/N)\n").lower().strip()
-
-    if ask_user == "y":
-        generate_plate()
-    else:
-        generator_is_on = False
+create_plate()
