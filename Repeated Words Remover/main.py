@@ -12,5 +12,6 @@ if checker != "":
     for i in each_word:
         if i not in words:
             words.append(i)
-            
-    print(words)
+
+    print(f"Here's your output:\n"
+          f"{words}")
