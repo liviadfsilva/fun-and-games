@@ -26,10 +26,7 @@ while len(guessed_states) < 26:
     all_states = data.states.to_list()
 
     if answer == "Exit":
-        missing_states = []
-        for state in all_states:
-            if state not in guessed_states:
-                missing_states.append(state)
+        missing_states = [state for state in all_states if state not in guessed_states]
         new_data = pandas.DataFrame(missing_states)
         new_data.to_csv("states_to_learn.csv")
     if answer in all_states:
