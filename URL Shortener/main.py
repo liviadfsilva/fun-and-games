@@ -1,6 +1,5 @@
 import pyshorteners
 
-url = input("Type your URL here: ")
-
+url = input("Paste your URL here: ")
 short_url = pyshorteners.Shortener().tinyurl.short(url)
-print(short_url)
+print(f"Here's your shortened URL: {short_url}")
