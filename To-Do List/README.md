@@ -13,7 +13,7 @@ This minimalist program was created to make task management be more fun and less
 - Check ✓ the checkbox to complete the task in the entry box. Once you do that, it will be checked off and labeled as completed.
 - To access all completed tasks, select "View Completed Tasks"
 
-## Techonologies Used 🔧
+## Technologies Used 🔧
 
 [![My Skills](https://skillicons.dev/icons?i=python)](https://skillicons.dev)
 [![My Skills](https://skillicons.dev/icons?i=pycharm)](https://skillicons.dev)
